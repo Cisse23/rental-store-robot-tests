@@ -1,1 +1,7 @@
 venv/
+secrets.resource
+
+log.html
+report.html
+output.xml
+playwright-log.txt

@@ -1,6 +1,8 @@
 *** Settings ***
 Library    Browser
 Resource    rentalstore.resource
+Resource    secrets.resource
+
 
 *** Variables ***
 ${login_page}    https://rentalstore.azurewebsites.net/
@@ -10,7 +12,7 @@ ${login_page}    https://rentalstore.azurewebsites.net/
 *** Test Cases ***
 Navbar Test
     Open RentalStore Website
-    Login To RentalStore    timmy    timmy
+    Login To RentalStore    ${test_user}    ${test_password}
     Click All Links in Navbar
 
 

@@ -1,15 +1,17 @@
 *** Settings ***
 Resource    rentalstore.resource
+Resource    secrets.resource
 Library    Collections
 
 
 *** Variables ***
 &{equipment}    name=Buster Helmet    manufacturer=Buster    year=1969    size=Small    category=Cycling    model=Junior    color=Graphite    condition=E    skill_level=B    description=Coolest helmet for juniors by Buster
 
+
 *** Test Cases ***
 Add New Equipment
     Open RentalStore Website
-    Login To RentalStore    timmy    timmy
+    Login To RentalStore    ${test_user}    ${test_password}
     Click    //*[@id="add-equipment"]
     # Two textboxes with id_name in this form.
     Type Text    //*[@name="name"]    ${equipment}[name]
