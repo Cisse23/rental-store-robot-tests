@@ -11,6 +11,7 @@ Resource    ../RentalStoreResources/secrets.resource
 *** Test Cases ***
 User Can Open Add Equipment Page
     [Tags]    smoke
+    [Documentation]        Click navbar element "add-equipment" to open the Add equipment page
     Open RentalStore Website
     Login To RentalStore    ${test_user}    ${test_password}
     Click    //*[@id="add-equipment"]

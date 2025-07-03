@@ -11,6 +11,7 @@ ${login_page}    https://rentalstore.azurewebsites.net/
 *** Test Cases ***
 Navbar Test
     [Tags]    smoke    critical
+    [Documentation]        This test tries to click each item in the navigation bar element
     Open RentalStore Website
     Login To RentalStore    ${test_user}    ${test_password}
     Click All Links in Navbar
@@ -18,7 +19,7 @@ Navbar Test
 
 *** Keywords ***
 Click All Links in Navbar
-    [Documentation]    This test case demonstrates the use of for loops
+    [Documentation]    Get all navigation bar elements and click through them
     @{nav_links}    Get Elements    css=nav a.nav-link
     FOR    ${el}    IN    @{nav_links}
         Click    ${el}
