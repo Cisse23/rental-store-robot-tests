@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    rentalstore.resource
+Resource    ../RentalStoreResources/rentalstore.resource
 Library    String
 Test Setup    Open RentalStore Website
 Test Teardown    Close Browser

@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    rentalstore.resource
-Resource    secrets.resource
+Resource    ../RentalStoreResources/rentalstore.resource
+Resource    ../RentalStoreResources/secrets.resource
 
 
 *** Test Cases ***
@@ -9,7 +9,6 @@ User Can Sign In With Valid Credentials
     Open RentalStore Website
     Login To RentalStore    ${test_user}    ${test_password}
     Click Logout
-    
 
 User Can NOT Sign In With Wrong Username
     Open RentalStore Website

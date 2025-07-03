@@ -1,12 +1,11 @@
 *** Settings ***
 Library    Browser
-Resource    rentalstore.resource
-Resource    secrets.resource
+Resource    ../RentalStoreResources/rentalstore.resource
+Resource    ../RentalStoreResources/secrets.resource
 
 
 *** Variables ***
 ${login_page}    https://rentalstore.azurewebsites.net/
-
 
 
 *** Test Cases ***

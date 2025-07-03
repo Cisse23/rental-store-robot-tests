@@ -1,7 +1,7 @@
 *** Settings ***
-Resource    rentalstore.resource
-Resource    secrets.resource
 Library    Collections
+Resource    ../RentalStoreResources/rentalstore.resource
+Resource    ../RentalStoreResources/secrets.resource
 
 
 *** Variables ***

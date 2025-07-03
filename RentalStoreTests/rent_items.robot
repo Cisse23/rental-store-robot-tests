@@ -1,9 +1,7 @@
 *** Settings ***
 Library    Browser
-Resource    rentalstore.resource
-Resource    secrets.resource
-
-*** Variables ***
+Resource    ../RentalStoreResources/rentalstore.resource
+Resource    ../RentalStoreResources/secrets.resource
 
 
 *** Test Cases ***
