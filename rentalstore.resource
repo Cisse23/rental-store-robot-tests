@@ -20,3 +20,9 @@ Login To RentalStore
 
 Click Submit
     Click    //*[@type="submit"]
+
+Click Login
+    Click    //*[@id="login"]
+
+Click Logout    
+...    Click    //*[@id="logout"]
