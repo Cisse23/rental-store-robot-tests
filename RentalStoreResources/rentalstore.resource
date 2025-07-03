@@ -18,6 +18,15 @@ Login To RentalStore
     Type Secret    //*[@id="id_password"]    secret=$password
     Click    //*[@type="submit"]
 
+Open RentalStore Website and Login
+    [Arguments]    ${user}    ${password}
+    New Browser    browser=chromium    headless=False
+    New Page    ${url}
+    Click    id=login
+    Type Text    //*[@id="id_username"]    ${user}
+    Type Secret    //*[@id="id_password"]    secret=$password
+    Click    //*[@type="submit"]
+
 Click Submit
     Click    //*[@type="submit"]
 

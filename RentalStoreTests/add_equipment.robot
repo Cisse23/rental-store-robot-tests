@@ -16,10 +16,18 @@ User Can Open Add Equipment Page
     Login To RentalStore    ${test_user}    ${test_password}
     Click    //*[@id="add-equipment"]
 
-Add New Equipment
+User Can Add New Equipment
     Open RentalStore Website
     Login To RentalStore    ${test_user}    ${test_password}
     Click    //*[@id="add-equipment"]
+
+    Fill in Add Equipment Form
+    Click Submit
+
+*** Keywords ***
+Fill In Add Equipment Form
+    [Documentation]    Fills in the form to add equiments
+    [Arguments]    &{equipment}
     # Two textboxes with id_name in this form.
     Type Text    //*[@name="name"]    ${equipment}[name]
     Type Text    //*[@id="id_manufacturer"]    ${equipment}[manufacturer]
@@ -33,6 +41,3 @@ Add New Equipment
     
     Click    input[name="condition"][value="${equipment}[condition]"]
     Check Checkbox    input[name="skill_level"][value="${equipment}[skill_level]"]
-
-    Click Submit
-
