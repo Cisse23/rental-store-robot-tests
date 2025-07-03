@@ -6,7 +6,8 @@ ${url}    https://rentalstore.azurewebsites.net/
 
 *** Keywords ***
 Open RentalStore Website
-    New Browser    chromium    headless=False
+    [Arguments]    ${browser}=chromium
+    New Browser    ${browser}    headless=False
     # headless = browser operates in the background
     New Page    ${url}
 
