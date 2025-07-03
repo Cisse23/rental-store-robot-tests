@@ -15,11 +15,13 @@ User Can Open Sign up Page
     Open Sign up Page
 
 User Can Create New Randomized User
+    [Tags]    critical
     Open Sign up Page
     ${random_number}    Generate Random String    3    chars=[NUMBERS]
     Sign up New RentalStore User    Kikka    ${random_number}nen    Kikka${random_number}    kikka.${random_number}@maili.fi    kikka${random_number}
 
 User Can't Signup With Existing Username
+    [Tags]    critical
     Open Sign up Page
     Sign up New RentalStore User    timmy    timmy    timmy    t@immy.mail    timmy
     ${alert_text}=    Get Text    css=div.alert.alert-danger

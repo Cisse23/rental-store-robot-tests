@@ -9,6 +9,12 @@ Resource    ../RentalStoreResources/secrets.resource
 
 
 *** Test Cases ***
+User Can Open Add Equipment Page
+    [Tags]    smoke
+    Open RentalStore Website
+    Login To RentalStore    ${test_user}    ${test_password}
+    Click    //*[@id="add-equipment"]
+
 Add New Equipment
     Open RentalStore Website
     Login To RentalStore    ${test_user}    ${test_password}

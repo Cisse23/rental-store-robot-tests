@@ -10,6 +10,7 @@ ${login_page}    https://rentalstore.azurewebsites.net/
 
 *** Test Cases ***
 Navbar Test
+    [Tags]    smoke    critical
     Open RentalStore Website
     Login To RentalStore    ${test_user}    ${test_password}
     Click All Links in Navbar

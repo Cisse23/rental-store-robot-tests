@@ -6,6 +6,7 @@ Resource    ../RentalStoreResources/secrets.resource
 
 *** Test Cases ***
 Rent items
+    [Tags]    smoke
     Open RentalStore Website
     Login To RentalStore    ${test_user}    ${test_password}
     # Select first item in list of equipment
