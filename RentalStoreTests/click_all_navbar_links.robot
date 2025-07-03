@@ -18,7 +18,7 @@ Navbar Test
 
 
 *** Keywords ***
-Click All Links in Navbar
+Click All Links In Navbar
     [Documentation]    Get all navigation bar elements and click through them
     @{nav_links}    Get Elements    css=nav a.nav-link
     FOR    ${el}    IN    @{nav_links}

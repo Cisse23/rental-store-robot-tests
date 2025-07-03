@@ -10,7 +10,7 @@ ${user_name}    new user
 ${user_password}    new password
 
 *** Test Cases ***
-User Can Open Sign up Page
+User Can Open Sign Up Page
     [Tags]    smoke
     [Documentation]        This test checks if the Signup page can be opened 
     Open Sign up Page
@@ -32,11 +32,11 @@ User Can't Signup With Existing Username
     Should Contain    ${alert_text}    Signup failed
 
 *** Keywords ***
-Open Sign up Page
+Open Sign Up Page
     [Documentation]        Click navbar element "signup" to open the Sign up page
     Click    //*[@id="signup"]
 
-Sign up New RentalStore User
+Sign Up New RentalStore User
     [Documentation]        Fill in all fields in the Sign up form
     [Arguments]    ${first_name}    ${last_name}    ${user_name}    ${user_email}    ${$user_password}
     Type Text    //*[@id="id_first_name"]    ${first_name}
