@@ -5,6 +5,7 @@ Resource    secrets.resource
 
 *** Test Cases ***
 User Can Sign In With Valid Credentials
+    [Tags]    smoke
     Open RentalStore Website
     Login To RentalStore    ${test_user}    ${test_password}
     Click Logout

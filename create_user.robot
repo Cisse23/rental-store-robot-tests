@@ -1,6 +1,8 @@
 *** Settings ***
 Resource    rentalstore.resource
 Library    String
+Test Setup    Open RentalStore Website
+Test Teardown    Close Browser
 
 
 *** Variables ***
@@ -8,14 +10,16 @@ ${user_name}    new user
 ${user_password}    new password
 
 *** Test Cases ***
+User Can Open Sign up Page
+    [Tags]    smoke
+    Open Sign up Page
+
 User Can Create New Randomized User
-    Open RentalStore Website
     Open Sign up Page
     ${random_number}    Generate Random String    3    chars=[NUMBERS]
     Sign up New RentalStore User    Kikka    ${random_number}nen    Kikka${random_number}    kikka.${random_number}@maili.fi    kikka${random_number}
 
 User Can't Signup With Existing Username
-    Open RentalStore Website
     Open Sign up Page
     Sign up New RentalStore User    timmy    timmy    timmy    t@immy.mail    timmy
     ${alert_text}=    Get Text    css=div.alert.alert-danger
@@ -34,4 +38,3 @@ Sign up New RentalStore User
     Type Secret    //*[@id="id_password1"]    secret=$user_password
     Type Secret    //*[@id="id_password2"]    secret=$user_password
     Click Submit
-    Sleep    5
