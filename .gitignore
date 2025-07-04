@@ -1,7 +1,8 @@
 venv/
-secrets.resource
+results/
+*secrets.resource
 
-log.html
-report.html
-output.xml
-playwright-log.txt
+*log.html
+*report.html
+*output.xml
+*playwright-log.txt
