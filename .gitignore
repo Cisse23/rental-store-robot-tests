@@ -6,3 +6,4 @@ results/
 *report.html
 *output.xml
 *playwright-log.txt
+*browser/
