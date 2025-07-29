@@ -1,6 +1,7 @@
 venv/
 results/
 *secrets.resource
+__pycache__/
 
 *log.html
 *report.html
