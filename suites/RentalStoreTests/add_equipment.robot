@@ -21,7 +21,7 @@ User Can Add New Equipment
     Login To RentalStore    ${test_user}    ${test_password}
     Click    //*[@id="add-equipment"]
 
-    Fill in Add Equipment Form
+    Fill in Add Equipment Form    &{equipment}
     Click Submit
 
 *** Keywords ***

@@ -1,0 +1,11 @@
+*** Test Cases ***;${equipment_name};${manufacturer};${year};${model};${color};${description};${category};${size};${condition};${skill_level}
+Sierra XC Skis;Sierra XC Skis;Fischer;1987;XC-Classic 200;White/Blue;Lightweight skis designed for stable cross-country skiing. Great for long treks on groomed trails.;Cross-country skiing;Medium;G;I
+Velocity Bike Pro;Velocity Bike Pro;Trek;2021;VeloX300;Matte Black;High-performance road bike ideal for daily rides or races. Responsive handling and durable frame.;Cycling;Large;E;P
+Glide Disc Z3;Glide Disc Z3;Innova;2019;Z3-Control;Yellow;Mid-range disc with excellent glide and control. Suitable for wooded or open courses.;Disc golf;Small;E;B
+Storm Ski Set;Storm Ski Set;Atomic;2005;DH-Racer 7;Red/Black;Downhill skis offering speed and stability. Ideal for carving turns at high speeds.;Downhill skiing;Large;G;E
+Ace Iron Set;Ace Iron Set;Callaway;1995;X14 Steel;Chrome;Classic iron set with balanced weight. Favored by many for its forgiving design.;Golf;Medium;G;I
+PadelMaster Carbon;PadelMaster Carbon;Bullpadel;2023;Carbon-X Pro;Black/Green;Top-tier padel racket made with carbon fiber. Offers powerful shots and precision control.;Padel;Small;E;P
+Blizzard Cross Pro;Blizzard Cross Pro;Salomon;1978;XC-BZ80;White/Red;Reliable and sturdy set of cross-country skis. Perfect for challenging terrain.;Cross-country skiing;Large;B;E
+Cruze Bike Urban;Cruze Bike Urban;Specialized;2015;MetroCruze 500;Silver;Comfortable urban bike designed for commuting. Smooth gear shifts and good posture support.;Cycling;Medium;G;B
+SkyDrive Disc Putter;SkyDrive Disc Putter;Discmania;2020;Sky-Drive P1;Purple;Putter disc with a soft grip and accurate release. Great for short approaches.;Disc golf;Small;E;I
+TurboPad Racket;TurboPad Racket;Adidas;2010;TPX400;Blue/Orange;Durable padel racket with textured surface. Built for aggressive offensive players.;Padel;Medium;G;P
