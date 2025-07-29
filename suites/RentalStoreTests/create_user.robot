@@ -1,6 +1,7 @@
 *** Settings ***
 Resource    ../RentalStoreResources/rentalstore.resource
 Library    String
+Library    ../../libs/RandomNameLibrary.py
 Test Setup    Open RentalStore Website
 Test Teardown    Close Browser
 
@@ -15,12 +16,15 @@ User Can Open Sign Up Page
     [Documentation]        This test checks if the Signup page can be opened 
     Open Sign up Page
 
-User Can Create New Randomized User
+User Can Create New Randomized User With RandomNameLibrary
     [Tags]    critical
     [Documentation]        This test uses randomized data to create a user that hopefully hasn't been created before
+    ${random_firstname}    Get random firstname
+    ${random_lastname}    Get random lastname
+    ${random_number}    Get random number    3
+    ${username}    Get Username    ${random_firstname}    3    ${random_lastname}    4
     Open Sign up Page
-    ${random_number}    Generate Random String    3    chars=[NUMBERS]
-    Sign up New RentalStore User    Kikka    ${random_number}nen    Kikka${random_number}    kikka.${random_number}@maili.fi    kikka${random_number}
+    Sign Up New RentalStore User    ${random_firstname}    ${random_lastname}    ${username}    ${random_firstname}.${random_lastname}@ema.il    ${random_firstname}${random_number}
 
 User Can't Signup With Existing Username
     [Tags]    critical
@@ -30,6 +34,7 @@ User Can't Signup With Existing Username
     Sign up New RentalStore User    timmy    timmy    timmy    tim@my.mail    timmy
     ${alert_text}=    Get Text    css=div.alert.alert-danger
     Should Contain    ${alert_text}    Signup failed
+
 
 *** Keywords ***
 Open Sign Up Page
@@ -46,3 +51,10 @@ Sign Up New RentalStore User
     Type Secret    //*[@id="id_password1"]    secret=$user_password
     Type Secret    //*[@id="id_password2"]    secret=$user_password
     Click Submit
+
+User Can Create New Randomized User
+    [Tags]    critical
+    [Documentation]        This test is retired. This test uses randomized data to create a user that hopefully hasn't been created before
+    Open Sign up Page
+    ${random_number}    Generate Random String    3    chars=[NUMBERS]
+    Sign up New RentalStore User    Kikka    ${random_number}nen    Kikka${random_number}    kikka.${random_number}@maili.fi    kikka${random_number}
